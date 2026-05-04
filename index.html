@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  TalentBridge — index.html
+  =========================
+  Naming convention: BEM-inspired
+    Block:    .hero
+    Element:  .hero__heading
+    Modifier: .btn--amber
+
+  To add a new section:
+    1. Create a <section class="your-section"> block here.
+    2. Add a matching rule block in style.css (copy the comment header pattern).
+    3. Add any JS behaviour in script.js as a named function.
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TalentBridge — Bridging Elite Talent with Global Opportunity</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============================================================
+       HEADER
+       Sticky navigation bar with logo, primary nav and auth CTAs.
+  ============================================================ -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="#" class="logo">TalentBridge</a>
+
+            <nav class="primary-nav" aria-label="Primary">
+                <a href="#" class="nav-link" aria-current="page">Find Work</a>
+                <a href="#" class="nav-link">Hire Talent</a>
+            </nav>
+
+            <div class="auth-actions">
+                <a href="#" class="btn btn--ghost">Log In</a>
+                <a href="#" class="btn btn--amber">Sign Up</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ============================================================
+       HERO
+  ============================================================ -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__inner">
+
+            <div class="hero__content">
+                <h1 class="hero__heading" id="hero-heading">
+                    Bridging elite talent with<br>global opportunity.
+                </h1>
+
+                <p class="hero__subtext">
+                    The premium marketplace for independent professionals.
+                    Manage entire workflows — from custom proposals and real-time
+                    chat to secure escrow payments.
+                </p>
+
+                <div class="hero__cta">
+                    <a href="#" class="btn btn--amber btn--amber-lg">
+                        Find a Freelancer
+                        <span class="btn__arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="#" class="btn btn--navy">Find Work</a>
+                </div>
+            </div>
+
+            <div class="hero__media">
+                <div class="hero__image-card">
+                    <img src="/images/Container.svg" alt="Three professionals collaborating over a tablet"
+                        class="hero__image" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       CAPABILITIES
+  ============================================================ -->
+    <section class="capabilities" aria-labelledby="capabilities-heading">
+        <div class="capabilities__inner">
+
+            <div class="section-header">
+                <span class="section-header__label">Capabilities</span>
+                <h2 class="section-header__title" id="capabilities-heading">
+                    Engineered for Precision
+                </h2>
+            </div>
+
+            <div class="cards-grid">
+
+                <article class="card reveal reveal--delay-1">
+                    <div class="card__icon card__icon--purple" aria-hidden="true">
+                        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="3" width="18" height="22" rx="3" stroke="#6C63FF" stroke-width="2" />
+                            <line x1="9" y1="9" x2="19" y2="9" stroke="#6C63FF" stroke-width="2"
+                                stroke-linecap="round" />
+                            <line x1="9" y1="13" x2="19" y2="13" stroke="#6C63FF" stroke-width="2"
+                                stroke-linecap="round" />
+                            <line x1="9" y1="17" x2="15" y2="17" stroke="#6C63FF" stroke-width="2"
+                                stroke-linecap="round" />
+                            <rect x="13" y="15" width="8" height="8" rx="2" fill="#6C63FF" opacity="0.25" />
+                            <line x1="15" y1="17" x2="19" y2="17" stroke="#6C63FF" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <line x1="15" y1="20" x2="19" y2="20" stroke="#6C63FF" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card__title">Post Jobs with Ease</h3>
+                    <p class="card__body">
+                        Our intuitive job engine helps you define scope, budget, and milestones
+                        in minutes, reaching the perfect match faster.
+                    </p>
+                </article>
+
+                <article class="card reveal reveal--delay-2">
+                    <div class="card__icon card__icon--teal" aria-hidden="true">
+                        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="3" width="16" height="20" rx="3" stroke="#0D9488" stroke-width="2" />
+                            <line x1="8" y1="9" x2="16" y2="9" stroke="#0D9488" stroke-width="2"
+                                stroke-linecap="round" />
+                            <line x1="8" y1="13" x2="16" y2="13" stroke="#0D9488" stroke-width="2"
+                                stroke-linecap="round" />
+                            <line x1="8" y1="17" x2="12" y2="17" stroke="#0D9488" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="21" cy="21" r="5" fill="#0D9488" opacity="0.15" stroke="#0D9488"
+                                stroke-width="1.5" />
+                            <line x1="19" y1="21" x2="23" y2="21" stroke="#0D9488" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <line x1="21" y1="19" x2="21" y2="23" stroke="#0D9488" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card__title">Bid &amp; Proposal System</h3>
+                    <p class="card__body">
+                        Structured proposals allow freelancers to showcase expertise while
+                        clients compare transparent quotes and timelines.
+                    </p>
+                </article>
+
+                <article class="card reveal reveal--delay-3">
+                    <div class="card__icon card__icon--peach" aria-hidden="true">
+                        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 3L5 7v7c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7L14 3z" stroke="#D97706"
+                                stroke-width="2" stroke-linejoin="round" fill="#D97706" fill-opacity="0.12" />
+                            <path d="M10 14l3 3 5-5" stroke="#D97706" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card__title">Secure Escrow Payments</h3>
+                    <p class="card__body">
+                        Funds are held securely and released only when milestones are met,
+                        ensuring total financial peace of mind for both parties.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       REAL-TIME SECTION
+  ============================================================ -->
+    <section class="realtime reveal" aria-labelledby="realtime-heading">
+        <div id="realtime_details">
+            <img src="/images/realtime.png" alt="seamless realtime message">
+            <div class="realtime-content">
+                <h1 class="content">Seamless Real-time Collaboration</h1>
+                <p class="content">Experience instant connectivity with our WebSocket-powered
+                    messaging engine. No more refreshing or lost emails.</p>
+                <ul class="features">
+                    <li class="content">Instant messaging with read receipts</li>
+                    <li class="content">Integrated video and audio huddles</li>
+                    <li class="content">File sharing and version control tracking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       HOW TALENTBRIDGE WORKS SECTION
+  ============================================================ -->
+    <section class="container reveal">
+        <h2>How TalentBridge Works</h2>
+
+        <div class="columns">
+
+            <div class="column">
+                <div class="title">
+                    <span class="badge yellow">1</span>
+                    <h3>For Clients</h3>
+                </div>
+
+                <div class="step">
+                    <span class="dot blue"></span>
+                    <div>
+                        <h4>Post</h4>
+                        <p>Define your project goals and budget.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="dot blue"></span>
+                    <div>
+                        <h4>Award</h4>
+                        <p>Review proposals and hire the best fit.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="dot blue"></span>
+                    <div>
+                        <h4>Pay</h4>
+                        <p>Release funds via escrow as work is completed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="title">
+                    <span class="badge blue">2</span>
+                    <h3>For Freelancers</h3>
+                </div>
+
+                <div class="step">
+                    <span class="dot green"></span>
+                    <div>
+                        <h4>Browse</h4>
+                        <p>Find jobs that match your specialized skills.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="dot green"></span>
+                    <div>
+                        <h4>Bid</h4>
+                        <p>Submit professional, competitive proposals.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="dot green"></span>
+                    <div>
+                        <h4>Earn</h4>
+                        <p>Get paid reliably through our secure system.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       TRUST SECTION
+  ============================================================ -->
+    <section class="trust reveal">
+        <div class="container">
+            <h2>Enterprise-Grade Trust</h2>
+
+            <div class="trust-grid">
+                <div class="item">
+                    <div class="title">
+                        <img src="/images/Icon.svg" class="icon">
+                        <span>
+                            <h4>Multi-Role Auth</h4>
+                        </span>
+                    </div>
+                    <p>Dedicated workflows for clients and freelancers with secure session management.</p>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <img src="/images/Icon 1.svg" class="icon-1">
+                        <span>
+                            <h4>State-Driven Jobs</h4>
+                        </span>
+                    </div>
+                    <p>Automated project lifecycle from "Draft" to "In-Progress" to "Completed".</p>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <img src="/images/Icon 2.svg" class="icon-2">
+                        <span>
+                            <h4>Verified Identities</h4>
+                        </span>
+                    </div>
+                    <p>Rigorous vetting process to ensure high-quality professional standards.</p>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <img src="/images/Icon 3.svg" class="icon-3">
+                        <span>
+                            <h4>Secure Payouts</h4>
+                        </span>
+                    </div>
+                    <p>Direct bank transfers and digital wallet integrations with full audit trails.</p>
+                </div>
+            </div>
+
+            <img class="image" src="/images/Background.svg" id="tilted-sq">
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       CTA SECTION
+  ============================================================ -->
+    <section class="cta reveal">
+        <h2>Ready to build your next big thing?</h2>
+        <p>
+            Join thousands of businesses and independent experts already <br>
+            growing on TalentBridge.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="btn primary">Get Started for Free</a>
+            <a href="#" class="btn secondary">Schedule a Demo</a>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="reveal">
+        <div class="footer-top">
+            <div class="brand">TalentBridge</div>
+
+            <div class="links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Help Center</a>
+                <a href="#">Careers</a>
+                <a href="#">Trust & Safety</a>
+            </div>
+        </div>
+
+        <p class="copy">
+            © 2024 TalentBridge. Precision crafted for the modern workforce.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -48,7 +48,7 @@
   --color-icon-teal: #0d9488;
   --color-icon-peach: #d97706;
 
-  --font-family-base: "Inter", sans-serif;
+  --font-family-base: 'Inter', sans-serif;
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;
@@ -92,13 +92,13 @@
   --shadow-btn-amber: 0 4px 12px rgba(255, 193, 7, 0.45);
   --shadow-btn-navy: 0 6px 20px rgba(36, 56, 156, 0.35);
 
-  --shadow-hero-image:
-    0 2px 6px rgba(67, 56, 202, 0.08), 0 8px 28px rgba(67, 56, 202, 0.14),
-    0 32px 72px rgba(67, 56, 202, 0.18), 0 0 0 1px rgba(200, 210, 240, 0.35);
+  --shadow-hero-image: 0 2px 6px rgba(67, 56, 202, 0.08),
+    0 8px 28px rgba(67, 56, 202, 0.14), 0 32px 72px rgba(67, 56, 202, 0.18),
+    0 0 0 1px rgba(200, 210, 240, 0.35);
 
-  --shadow-hero-image-hover:
-    0 4px 12px rgba(67, 56, 202, 0.1), 0 16px 40px rgba(67, 56, 202, 0.18),
-    0 48px 96px rgba(67, 56, 202, 0.22), 0 0 0 1px rgba(200, 210, 240, 0.5);
+  --shadow-hero-image-hover: 0 4px 12px rgba(67, 56, 202, 0.1),
+    0 16px 40px rgba(67, 56, 202, 0.18), 0 48px 96px rgba(67, 56, 202, 0.22),
+    0 0 0 1px rgba(200, 210, 240, 0.5);
 
   --max-width: 1280px;
   --header-height: 68px;
@@ -184,12 +184,12 @@ body {
   white-space: nowrap;
 }
 
-.nav-link[aria-current="page"] {
+.nav-link[aria-current='page'] {
   color: var(--color-brand-accent);
 }
 
-.nav-link[aria-current="page"]::after {
-  content: "";
+.nav-link[aria-current='page']::after {
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -217,10 +217,7 @@ body {
   cursor: pointer;
   border: none;
   background: transparent;
-  transition:
-    color 0.2s ease,
-    background 0.2s ease,
-    transform 0.15s ease,
+  transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease,
     box-shadow 0.2s ease;
   white-space: nowrap;
   position: relative;
@@ -356,8 +353,7 @@ body {
   --scroll-shift: 0px;
   margin-top: calc(var(--scroll-shift) * -1);
   box-shadow: var(--shadow-hero-image);
-  transition:
-    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.4s ease;
   transform-style: preserve-3d;
   will-change: transform;
@@ -368,7 +364,7 @@ body {
 }
 
 .hero__image-card::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   border-radius: var(--radius-lg);
@@ -424,10 +420,11 @@ body {
 }
 
 .section-header {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-3);
+  gap: 10px;
 }
 
 .section-header__label {
@@ -436,6 +433,7 @@ body {
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   color: var(--color-brand-primary);
+  bottom: 10px;
 }
 
 .section-header__title {
@@ -464,9 +462,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: default;
 }
 
@@ -532,9 +528,7 @@ body {
   color: #24389c;
   opacity: 0;
   transform: translateY(40px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .realtime.reveal--visible {
@@ -557,9 +551,7 @@ body {
   flex-shrink: 0;
   border-radius: 16px;
   filter: drop-shadow(8px 8px 10px gray);
-  transition:
-    transform 0.4s ease,
-    filter 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .realtime img:hover {
@@ -605,7 +597,7 @@ ul {
 }
 
 .features li::before {
-  content: "✔";
+  content: '✔';
   position: absolute;
   left: -3px;
   top: 10px;
@@ -626,9 +618,7 @@ ul {
 .column .step {
   opacity: 0;
   transform: translateX(-16px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .container.reveal--visible .column:first-child .step:nth-child(2) {
@@ -710,7 +700,7 @@ h2 {
 }
 
 .step::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 6px;
   top: 20px;
@@ -745,6 +735,140 @@ p {
 }
 
 /* ============================================================
+   8. LIVE SECTION
+   ============================================================ */
+
+.jobs-section {
+  width: 100%;
+  background: var(--color-bg-subtle);
+  padding: 20px 0;
+  margin-top: 48px;
+}
+
+#jobs-heading {
+  margin-bottom: 2px;
+}
+
+.jobs-section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.jobs-section__subtext {
+  text-align: center;
+  max-width: 720px;
+  margin: 0px auto 20px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.job-card {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.job-card h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-brand-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.job-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-mid);
+  font-size: 14px;
+}
+
+.job-meta i {
+  color: var(--color-brand-accent);
+}
+
+.job-location {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.job-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  background: var(--color-brand-primary);
+  color: white;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.job-link:hover {
+  background: var(--color-brand-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-navy);
+}
+
+.job-loading,
+.job-error {
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 18px;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   RESPONSIVE — JOBS SECTION
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-section {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs-section__inner {
+    padding: 0 20px;
+  }
+
+  .job-card {
+    padding: 22px;
+  }
+
+  .job-card h3 {
+    font-size: 18px;
+  }
+}
+
+/* ============================================================
    8. TRUST SECTION
    ============================================================ */
 
@@ -761,9 +885,7 @@ p {
   overflow: hidden;
   opacity: 0;
   transform: translateY(40px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .trust.reveal--visible {
@@ -774,9 +896,7 @@ p {
 .trust .item {
   opacity: 0;
   transform: translateX(-20px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .trust.reveal--visible .item:nth-child(1) {
@@ -874,9 +994,7 @@ p {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   opacity: 0;
   transform: scale(0.97) translateY(30px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .cta.reveal--visible {
@@ -887,25 +1005,19 @@ p {
 .cta h2 {
   opacity: 0;
   transform: translateY(16px);
-  transition:
-    opacity 0.5s ease 0.2s,
-    transform 0.5s ease 0.2s;
+  transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
 }
 
 .cta p {
   opacity: 0;
   transform: translateY(12px);
-  transition:
-    opacity 0.5s ease 0.35s,
-    transform 0.5s ease 0.35s;
+  transition: opacity 0.5s ease 0.35s, transform 0.5s ease 0.35s;
 }
 
 .cta .buttons {
   opacity: 0;
   transform: translateY(12px);
-  transition:
-    opacity 0.5s ease 0.5s,
-    transform 0.5s ease 0.5s;
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s;
 }
 
 .cta.reveal--visible h2,
@@ -944,10 +1056,7 @@ p {
   font-weight: 700;
   font-size: 14px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  transition:
-    background 0.25s ease,
-    transform 0.2s ease,
-    box-shadow 0.25s ease;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 .btn.primary:hover {
@@ -964,10 +1073,7 @@ p {
   padding: 14px 28px;
   font-weight: 700;
   font-size: 14px;
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.2s ease,
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease,
     box-shadow 0.25s ease;
 }
 
@@ -988,9 +1094,7 @@ footer {
   text-align: center;
   opacity: 0;
   transform: translateY(20px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 footer.reveal--visible {
@@ -1067,9 +1171,7 @@ footer.reveal--visible {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal--visible {
